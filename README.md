@@ -24,10 +24,27 @@ Compact STM32F103C8T6 controller board designed in KiCad, with USB power and nat
 
 ## What is in this repo
 
-- KiCad source files: `.kicad_sch`, `.kicad_pcb`, and project settings
+- KiCad source files: schematic, PCB, and project settings
 - Mechanical model: STEP file for enclosure alignment
 - Manufacturing outputs: Gerbers, drill file, and component placement CSVs
 - Reference renders: 3D view, layout, and schematic images
+
+## File labels
+
+| File | Label |
+| --- | --- |
+| [STM32.kicad_sch](STM32.kicad_sch) | Schematic source |
+| [STM32.kicad_pcb](STM32.kicad_pcb) | PCB layout source |
+| [STM32.kicad_pro](STM32.kicad_pro) | KiCad project settings |
+| [STM32.kicad_prl](STM32.kicad_prl) | KiCad local settings |
+| [629105150521 (rev1).stp](629105150521%20(rev1).stp) | 3D mechanical model |
+| [3D View.png](3D%20View.png) | 3D render |
+| [PCB Layout.png](PCB%20Layout.png) | PCB layout render |
+| [PCB Schematic.png](PCB%20Schematic.png) | Schematic render |
+| [Manufacturing/STM32.csv](Manufacturing/STM32.csv) | Component list export |
+| [Manufacturing/STM32-all-pos.csv](Manufacturing/STM32-all-pos.csv) | Pick-and-place positions |
+| [Manufacturing/Gerber/](Manufacturing/Gerber/) | Gerber and drill outputs |
+| [README.md](README.md) | Project overview |
 
 ## Hardware overview
 
