@@ -56,6 +56,16 @@ Compact STM32F103C8T6 controller board designed in KiCad, with USB power and nat
 - IO headers: UART1 and I2C2 (with pull-ups) on 1x4 headers
 - Mechanical: four M2 mounting holes
 
+## Schematic description
+
+- Core MCU: STM32F103C8T6 (U2) with dedicated VDD decoupling (multiple 100 nF caps plus a bulk 10 uF). NRST has a 100 nF cap to ground, and BOOT0 is selectable via a small SPDT switch with a pull resistor.
+- Clocking: External 16 MHz crystal (Y1) on HSE_IN/HSE_OUT with two 10 pF load capacitors to ground.
+- Power supply: USB VBUS feeds an AMS1117-3.3 LDO with 22 uF input/output caps. A red power LED with a series resistor indicates 3.3 V presence.
+- Analog supply filtering: VDDA is isolated from 3.3 V using a ferrite bead and local 10 nF + 1 uF caps, plus a 1 uF cap on VDDA.
+- USB interface: Micro-USB connector routes D+/D- to PA12/PA11. A 1.5 k pull-up on D+ provides full-speed identification, with VBUS present for USB power/sense.
+- Headers: SWD header with 3.3 V, SWDIO, SWCLK, and GND. UART header (USART1 TX/RX) with 3.3 V and GND. I2C header (I2C2 SCL/SDA) with 3.3 V and GND, plus 1.5 k pull-ups.
+- Mechanical: Four M2 mounting holes (H1-H4).
+
 ## Bill of materials (BOM)
 
 Values are taken from the schematic. Confirm footprints and ratings before ordering.
